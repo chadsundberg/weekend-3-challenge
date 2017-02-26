@@ -1,6 +1,6 @@
 $(document).ready(function(){
 var newMathObject = {};
-var mathOperation = '';
+// var mathOperation = '';
 
 $('button').on('click', function() {
   var mathOperation = $('.operation').val();
