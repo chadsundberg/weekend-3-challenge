@@ -15,8 +15,19 @@ app.use(bodyParser.json());
 
 app.post('/calculator/new', function(req, res){
   var newCalc = req.body;
-  console.log(newCalc);
-  res.sendStatus(200);
+  var x = parseFloat(newCalc.firstValue);
+  var y = parseFloat(newCalc.secondValue);
+  if (newCalc.operation == '+') {
+    var solution = x + y;
+  } else if (newCalc.operation == '-') {
+    var solution = x - y;
+  } else if (newCalc.operation == '*') {
+    var solution = x*y;
+  } else if (newCalc.operation == '/') {
+    var solution = x/y;
+  }
+  console.log(solution);
+  // res.sendStatus(200);
 });
 
 
