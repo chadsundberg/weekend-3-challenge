@@ -9,18 +9,35 @@
 <body>
   <h1>My Magnificent Calculator</h1>
   <form>
-    <label for="firstValue">First Value</label>
-    <input type="text" name="firstValue" placeholder="First Value" id="firstValue" class="calculatorInput">
-    <label for="secondValue">Second Value</label>
-    <input type="text" name="secondValue" placeholder="Second Value" id="secondValue" class="calculatorInput">
+
+    <input type="text" placeholder="Enter Value" class="calculatorInput">
     <table>
       <tr>
+        <td><input type="reset" class="clear" value="C" ></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="numerical" value="7"></td>
+        <td><input type="button" class="numerical" value="8"></td>
+        <td><input type="button" class="numerical" value="9"></td>
         <td><input type="button" class="operation" value="/"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="numerical" value="4"></td>
+        <td><input type="button" class="numerical" value="5"></td>
+        <td><input type="button" class="numerical" value="6"></td>
         <td><input type="button" class="operation" value="*"></td>
-        <td><input type="button" class="operation" value="+"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="numerical" value="1"></td>
+        <td><input type="button" class="numerical" value="2"></td>
+        <td><input type="button" class="numerical" value="3"></td>
         <td><input type="button" class="operation" value="-"></td>
-        <td><input type="reset" class="clear" ></td>
-        <td><input type="submit" ></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="numerical" value="0"></td>
+        <td><input type="button" class="numerical" value="."></td>
+        <td><input type="submit" value="=" ></td>
+        <td><input type="button" class="operation" value="+"></td>
       </tr>
     </table>
     <div id="answerDisplay">

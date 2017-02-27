@@ -1,20 +1,34 @@
 $(document).ready(function(){
 
   var mathOperation = '';
+  var firstInput = '';
+  var secondInput = '';
+
+
+  $('.numerical').on('click', function(){
+    firstInput += $(this).val();
+    $('.calculatorInput').val(firstInput);
+  });
 
   $('.operation').on('click', function() {
     mathOperation = $(this).val();
+    $('.numerical').off( 'click');
+    $('.numerical').on('click', function(){
+      $('.calculatorInput').empty();
+      secondInput += $(this).val();
+      $('.calculatorInput').val(secondInput);
+    });
   });
 
   $('.clear').on('click', function(){
-    $('#answerDisplay').empty();
+    myFunction();
   });
 
   $('form').on('submit', function(event){
     event.preventDefault();
     var newMathObject = {};
-    newMathObject.firstValue = $('#firstValue').val();
-    newMathObject.secondValue = $('#secondValue').val();
+    newMathObject.firstValue = firstInput;
+    newMathObject.secondValue = secondInput;
     newMathObject.operation = mathOperation;
     saveNewCalculation(newMathObject);
   });
@@ -26,11 +40,15 @@ $(document).ready(function(){
       data: newestMath,
       success: function(response){
         console.log(response);
-        $('#answerDisplay').append(response);
+        $('.calculatorInput').val(response);
       },
       error: function(response) {
-        $('#answerDisplay').append('something broke');
+        $('.calculatorInput').val('something broke');
       }
     });
   }
 });
+
+function myFunction() {
+  location.reload();
+}
