@@ -4,44 +4,49 @@
   <meta charset="utf-8">
   <title>Weekend 3 Challenge</title>
   <script src="jquery.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="client.js" charset="utf-8"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My Magnificent Calculator</h1>
-  <form>
-
-    <input type="text" placeholder="Enter Value" class="calculatorInput">
-    <table>
-      <tr>
-        <td><input type="reset" class="clear" value="C" ></td>
-      </tr>
-      <tr>
-        <td><input type="button" class="numerical" value="7"></td>
-        <td><input type="button" class="numerical" value="8"></td>
-        <td><input type="button" class="numerical" value="9"></td>
-        <td><input type="button" class="operation" value="/"></td>
-      </tr>
-      <tr>
-        <td><input type="button" class="numerical" value="4"></td>
-        <td><input type="button" class="numerical" value="5"></td>
-        <td><input type="button" class="numerical" value="6"></td>
-        <td><input type="button" class="operation" value="*"></td>
-      </tr>
-      <tr>
-        <td><input type="button" class="numerical" value="1"></td>
-        <td><input type="button" class="numerical" value="2"></td>
-        <td><input type="button" class="numerical" value="3"></td>
-        <td><input type="button" class="operation" value="-"></td>
-      </tr>
-      <tr>
-        <td><input type="button" class="numerical" value="0"></td>
-        <td><input type="button" class="numerical" value="."></td>
-        <td><input type="submit" value="=" ></td>
-        <td><input type="button" class="operation" value="+"></td>
-      </tr>
-    </table>
-    <div id="answerDisplay">
+  <div class="container text-center" id="calc">
+    <div class="calcBG col-md-3 col-md-offset-4 text-center">
+      <div class="row">
+        <small>My Magnificent Calculator</small>
+      </div>
+      <div class="row" id="result">
+        <form name="calc">
+            <button id="allClear" type="button" class="btn btn-danger">AC</button>
+            <input type="text" placeholder="Enter Value" class="calculatorInput">
+        </form>
+      </div>
+      <div class="row">
+        <button id="7" type="button" class="numerical" value="7">7</button>
+        <button id="8" type="button" class="numerical" value="8">8</button>
+        <button id="9" type="button" class="numerical" value="9">9</button>
+        <button id="*" type="button" class="operation" value="*">x</button>
+      </div>
+      <div class="row">
+        <button id="4" type="button" class="numerical" value="4">4</button>
+        <button id="5" type="button" class="numerical" value="5">5</button>
+        <button id="6" type="button" class="numerical" value="6">6</button>
+        <button id="-" type="button" class="operation" value="-">-</button>
+      </div>
+      <div class="row">
+        <button id="1" type="button" class="numerical" value="1">1</button>
+        <button id="2" type="button" class="numerical" value="2">2</button>
+        <button id="3" type="button" class="numerical" value="3">3</button>
+        <button id="+" type="button" class="operation" value="+">+</button>
+      </div>
+      <div class="row">
+        <button id="0" type="button" class="numerical" value="0">0</button>
+        <button id="." type="button" class="numerical" value=".">.</button>
+        <button id="equals" type="submit" value="=">=</button>
+        <button type="button" class="operation" value="/">÷</button>
+      </div>
     </div>
-  </form>
+  </div>
 </body>
 </html>

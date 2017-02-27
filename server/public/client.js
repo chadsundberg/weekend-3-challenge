@@ -20,12 +20,12 @@ $(document).ready(function(){
     });
   });
 
-  $('.clear').on('click', function(){
+  $('#allClear').on('click', function(){
     myFunction();
   });
 
-  $('form').on('submit', function(event){
-    event.preventDefault();
+  $('#equals').on('click', function(){
+    // event.preventDefault();
     var newMathObject = {};
     newMathObject.firstValue = firstInput;
     newMathObject.secondValue = secondInput;
